@@ -27,11 +27,9 @@ const App = () => {
       <Portfolio />
       <section id="Contact">
         <Contact />
-        contact
+        
       </section>
-      {/* Framer Motion Crash Course */}
-      {/* <Test/>
-    <Test/> */}
+      
     </div>
   );
 };
