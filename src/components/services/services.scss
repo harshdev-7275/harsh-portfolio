@@ -1,0 +1,221 @@
+@import "../../app.scss";
+
+.services {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile {
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+      text-align: right;
+    }
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+
+      @include mobile {
+        width: 300px;
+      }
+    }
+  }
+
+  .icons {
+    display: grid;
+  
+    align-items: center;
+    justify-content: center;
+
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px;
+    margin: 0 auto; /* Centers the grid horizontally */
+    max-width: 1366px; /* Optional: Sets a max-width for the icons */
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr); /* Adjust columns for tablets */
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr); /* Adjust columns for mobile */
+    }
+  }
+
+  .icons li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 110px;
+    height: 110px;
+    border: 2px solid transparent; /* Initially transparent border */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px;
+
+    @include tablet {
+      width: 90px;
+      height: 90px;
+    }
+
+    @include mobile {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  .icons li:hover {
+
+    background-color: transparent;
+    
+    svg{
+      transform: scale(1.2); 
+      transition: all 0.5s ease;
+      z-index: 9999;
+    }
+  }
+
+  .icons li svg {
+    width: 100px;
+    height: 100px;
+
+    @include tablet {
+      width: 80px;
+      height: 80px;
+    }
+
+    @include mobile {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .titleContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      img {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+
+        @include mobile {
+          width: 200px;
+          height: 50px;
+        }
+      }
+
+      h1 {
+        font-size: 96px;
+        font-weight: 100;
+
+        @include mobile {
+          font-size: 36px;
+        }
+      }
+
+      button {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: orange;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+
+        @include mobile {
+          font-size: 16px;
+          width: 150px;
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  .listContainer {
+    flex: 2;
+    display: flex;
+    max-width: 1366px;
+    margin: auto;
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .box {
+      padding: 50px;
+      border: 0.5px solid gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include mobile {
+        border: none;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+      }
+
+      p {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      button {
+        padding: 10px;
+        background-color: orange;
+        border: none;
+        cursor: pointer;
+
+        @include mobile {
+          background-color: transparent;
+          border: 1px solid orange;
+          border-radius: 5px;
+          color: orange;
+          width: 50%;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
